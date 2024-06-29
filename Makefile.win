@@ -1,0 +1,30 @@
+# Project: gtk_weather
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o $(RES)
+LINKOBJ  = main.o $(RES)
+LIBS =  -L"C:/Program Files/Common Files/GTK/2.0/LIB" -mwindows "../../../Program Files/Common Files/GTK/2.0/lib/gtk-win32-2.0.lib" "../../../Program Files/Common Files/GTK/2.0/lib/gobject-2.0.lib" "../../../Program Files/Common Files/GTK/2.0/lib/glib-2.0.lib" ../../lib/libwsock32.a "../../../Program Files/Common Files/GTK/2.0/lib/gthread-2.0.lib" "../../../Program Files/Common Files/GTK/2.0/lib/libxml2.dll.a"  
+INCS =  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GTK-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GLIB-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/PANGO-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/CAIRO"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/ATK-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GTKGLEXT-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GTK-2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GLIB-2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GTKGLEXT-1.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/LIBGLADE-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/LIBXML2"  -I"D:/Alexander/Programming/Sockets-2.1.7" 
+CXXINCS =  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GTK-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GLIB-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/PANGO-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/CAIRO"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/ATK-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/GTKGLEXT-1.0"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GTK-2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GLIB-2.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/LIB/GTKGLEXT-1.0/INCLUDE"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/LIBGLADE-2.0"  -I"C:/Program Files/Common Files/GTK/2.0/INCLUDE/LIBXML2"  -I"D:/Alexander/Programming/Sockets-2.1.7" 
+BIN  = gtk_weather.exe
+CXXFLAGS = $(CXXINCS) -mms-bitfields  
+CFLAGS = $(INCS) -mms-bitfields  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before gtk_weather.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "gtk_weather.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
